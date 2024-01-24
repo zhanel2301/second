@@ -18,9 +18,7 @@ public abstract class Person implements Payable, Comparable<Person>{
     }
 
     //getters and setters:
-    public String getPosition() {
-            return "Student";
-    }
+    public abstract String getPosition();
     public void setName(String name) {
         this.name = name;
     }

@@ -7,6 +7,11 @@ public class Student extends Person {
     public Student() {
     }
 
+    @Override
+    public String getPosition() {
+        return "Student";
+    }
+
     // parametrized constructor:
     public Student(String name, String surname, double gpa) {
         super(name, surname);
