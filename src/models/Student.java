@@ -2,18 +2,24 @@ package models;
 
 public class Student extends Person {
     private double gpa;
+
+    // default constructor:
     public Student() {
     }
+
+    // parametrized constructor:
     public Student(String name, String surname, double gpa) {
         super(name, surname);
         setGpa(gpa);
     }
     public void setGpa(double gpa) {
         this.gpa = gpa;
-    }
-    public double getGpa() {
+    } //setter
+    public double getGpa() { //getter
         return gpa;
     }
+
+    //overriding the getPaymentAmount() method:
     @Override
     public double getPaymentAmount() {
         if (gpa > 2.67)
@@ -21,6 +27,8 @@ public class Student extends Person {
         else
             return 0.00;
     }
+
+    //toString():
     @Override
     public String toString() {
         return "Student: " + super.toString();
